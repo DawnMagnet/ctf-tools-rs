@@ -1,0 +1,15 @@
+[submodule "fence-cipher-break"]
+	path = fence-cipher-break
+	url = https://github.com/DawnMagnet/fence-cipher-break.git
+[submodule "crc32-crack-zip"]
+	path = crc32-crack-zip
+	url = https://github.com/DawnMagnet/crc32-crack-zip
+[submodule "rust-ook-bf-intepreter"]
+	path = rust-ook-bf-intepreter
+	url = https://github.com/DawnMagnet/rust-ook-bf-intepreter
+[submodule "png-hw-fix"]
+	path = png-hw-fix
+	url = https://github.com/DawnMagnet/png-hw-fix
+[submodule "cloacked-pixel-rs"]
+	path = cloacked-pixel-rs
+	url = https://github.com/DawnMagnet/cloacked-pixel-rs
