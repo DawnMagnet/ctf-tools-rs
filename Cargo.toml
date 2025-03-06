@@ -1,0 +1,9 @@
+[workspace]
+resolver = "2"
+members = [
+    "fence-cipher-break",
+    "cloacked-pixel-rs",
+    "crc32-crack-zip",
+    "png-hw-fix",
+    "rust-ook-bf-intepreter",
+]
