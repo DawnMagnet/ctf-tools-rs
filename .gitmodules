@@ -13,3 +13,6 @@
 [submodule "cloacked-pixel-rs"]
 	path = cloacked-pixel-rs
 	url = https://github.com/DawnMagnet/cloacked-pixel-rs
+[submodule "substitution-cipher-solver"]
+	path = substitution-cipher-solver
+	url = https://github.com/DawnMagnet/substitution-cipher-solver.git
