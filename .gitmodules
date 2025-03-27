@@ -16,3 +16,6 @@
 [submodule "substitution-cipher-solver"]
 	path = substitution-cipher-solver
 	url = https://github.com/DawnMagnet/substitution-cipher-solver.git
+[submodule "affine-break"]
+	path = affine-break
+	url = https://github.com/DawnMagnet/affine-break.git
