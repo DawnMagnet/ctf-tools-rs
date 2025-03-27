@@ -35,3 +35,5 @@ cargo build --release --target x86_64-unknown-linux-musl
 - **crc32-crack-zip**: A tool to crack ZIP files using CRC32 collision.(for less than 10 bytes file)
 - **png-hw-fix**: A tool to fix PNG files with incorrect header width/height. (fix crc32 checksum)
 - **rust-ook-bf-intepreter**: A Rust-based Ook!(and short ook) and Brainfuck interpreter.
+- **substitution-cipher-solver**: A tool to solve substitution ciphers.
+- **affine-break**: A tool to break affine ciphers.
