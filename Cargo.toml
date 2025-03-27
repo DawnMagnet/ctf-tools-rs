@@ -6,4 +6,6 @@ members = [
     "crc32-crack-zip",
     "png-hw-fix",
     "rust-ook-bf-intepreter",
+    "substitution-cipher-solver",
+    "affine-break",
 ]
