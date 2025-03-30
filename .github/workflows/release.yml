@@ -8,6 +8,10 @@ on:
     tags:
       - "v*"
 
+env:
+  SCCACHE_GHA_ENABLED: "true"
+  RUSTC_WRAPPER: "sccache"
+
 permissions:
   contents: write
   # packages: write
@@ -24,6 +28,8 @@ jobs:
           submodules: recursive
       - name: Install Upx
         run: sudo apt-get install -y upx
+      - name: Run sccache-cache
+        uses: mozilla-actions/sccache-action@v0.0.9
       - name: Set up Zig
         uses: mlugg/setup-zig@v1
       - name: Set up Rust
