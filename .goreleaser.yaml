@@ -69,7 +69,7 @@ builds:
       - "aarch64-unknown-linux-musl"
 
     flags:
-      - --package=rust-ook-bf-intepreter
+      - --package=rob-vm
       - --release
   - id: substitution-cipher-solver
     builder: rust
