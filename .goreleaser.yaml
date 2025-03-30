@@ -32,10 +32,81 @@ builds:
       - --package=png-hw-fix
       - --release
 
+  - id: cloacked-pixel-rs
+    builder: rust
+    binary: png-lsb
+    targets:
+      - "x86_64-apple-darwin"
+      - "x86_64-pc-windows-gnu"
+      - "aarch64-apple-darwin"
+      - "x86_64-unknown-linux-musl"
+      - "aarch64-unknown-linux-musl"
+
+    flags:
+      - --package=cloacked-pixel-rs
+      - --release
+  - id: crc32-crack-zip
+    builder: rust
+    binary: crc32-crack-zip
+    targets:
+      - "x86_64-apple-darwin"
+      - "x86_64-pc-windows-gnu"
+      - "aarch64-apple-darwin"
+      - "x86_64-unknown-linux-musl"
+      - "aarch64-unknown-linux-musl"
+
+    flags:
+      - --package=crc32-crack-zip
+      - --release
+  - id: rust-ook-bf-intepreter
+    builder: rust
+    binary: rob
+    targets:
+      - "x86_64-apple-darwin"
+      - "x86_64-pc-windows-gnu"
+      - "aarch64-apple-darwin"
+      - "x86_64-unknown-linux-musl"
+      - "aarch64-unknown-linux-musl"
+
+    flags:
+      - --package=rust-ook-bf-intepreter
+      - --release
+  - id: substitution-cipher-solver
+    builder: rust
+    binary: substitution-cipher-solver
+    targets:
+      - "x86_64-apple-darwin"
+      - "x86_64-pc-windows-gnu"
+      - "aarch64-apple-darwin"
+      - "x86_64-unknown-linux-musl"
+      - "aarch64-unknown-linux-musl"
+
+    flags:
+      - --package=substitution-cipher-solver
+      - --release
+
+  - id: fence-cipher-break
+    builder: rust
+    binary: fence-cipher-break
+    targets:
+      - "x86_64-apple-darwin"
+      - "x86_64-pc-windows-gnu"
+      - "aarch64-apple-darwin"
+      - "x86_64-unknown-linux-musl"
+      - "aarch64-unknown-linux-musl"
+
+    flags:
+      - --package=fence-cipher-break
+      - --release
+
 nfpms:
   - ids:
-      - "affine-break"
-      - "png-hw-fix"
+      - cloacked-pixel-rs
+      - crc32-crack-zip
+      - fence-cipher-break
+      - png-hw-fix
+      - rust-ook-bf-intepreter
+      - substitution-cipher-solver
     vendor: dawnmagnet
     homepage: "https://github.com/DawnMagnet/ctf-tools-rs.git"
     maintainer: "Dawn Magnet <axccjqh@qq.com>"
@@ -56,7 +127,13 @@ upx:
     enabled: true
 
     # Filter by build ID.
-    ids: [affine-break, png-hw-fix]
+    ids:
+      - cloacked-pixel-rs
+      - crc32-crack-zip
+      - fence-cipher-break
+      - png-hw-fix
+      - rust-ook-bf-intepreter
+      - substitution-cipher-solver
     # Valid options are from '1' (faster) to '9' (better), and 'best'.
     compress: best
     # Whether to try LZMA (slower).
