@@ -101,6 +101,7 @@ builds:
 
 nfpms:
   - ids:
+      - affine-break
       - cloacked-pixel-rs
       - crc32-crack-zip
       - fence-cipher-break
@@ -128,6 +129,7 @@ upx:
 
     # Filter by build ID.
     ids:
+      - affine-break
       - cloacked-pixel-rs
       - crc32-crack-zip
       - fence-cipher-break
