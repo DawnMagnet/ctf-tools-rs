@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=https://goreleaser.com/static/schema.json
+version: 2
+before:
+  hooks:
+    - rustup default stable
+    - cargo install --locked cargo-zigbuild
+builds:
+  - id: "affine-break"
+    builder: rust
+    binary: affine-break
+    targets:
+      - "x86_64-apple-darwin"
+      - "x86_64-pc-windows-gnu"
+      - "aarch64-apple-darwin"
+      - "x86_64-unknown-linux-musl"
+      - "aarch64-unknown-linux-musl"
+
+    flags:
+      - --package=affine-break
+      - --release
+  - id: png-hw-fix
+    builder: rust
+    binary: png-hw-fix
+    targets:
+      - "x86_64-apple-darwin"
+      - "x86_64-pc-windows-gnu"
+      - "aarch64-apple-darwin"
+      - "x86_64-unknown-linux-musl"
+      - "aarch64-unknown-linux-musl"
+
+    flags:
+      - --package=png-hw-fix
+      - --release
+
+nfpms:
+  - builds:
+      - "affine-break"
+      - "png-hw-fix"
+    vendor: dawnmagnet
+    homepage: "https://github.com/DawnMagnet/ctf-tools-rs.git"
+    maintainer: "Dawn Magnet <axccjqh@qq.com>"
+    description: "A collection of tools for competitive programming and CTF (Capture The Flag) challenges, written in Rust."
+    license: MIT
+    formats:
+      - apk
+      - deb
+      - rpm
+      - archlinux
+
+    bindir: /usr/bin
+
+upx:
+  - # Whether to enable it or not.
+    #
+    # Templates: allowed.
+    enabled: true
+
+    # Filter by build ID.
+    ids: [affine-break, png-hw-fix]
+    # Valid options are from '1' (faster) to '9' (better), and 'best'.
+    compress: best
+    # Whether to try LZMA (slower).
+    lzma: true
