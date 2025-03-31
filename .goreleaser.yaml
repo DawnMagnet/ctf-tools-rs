@@ -138,5 +138,3 @@ upx:
       - substitution-cipher-solver
     # Valid options are from '1' (faster) to '9' (better), and 'best'.
     compress: best
-    # Whether to try LZMA (slower).
-    lzma: true
