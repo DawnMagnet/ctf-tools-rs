@@ -1,9 +1,6 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/goreleaser/goreleaser/v2.8.1/www/docs/static/schema.json
 version: 2
-before:
-  hooks:
-    - rustup default stable
-    - cargo install --locked cargo-zigbuild
+
 builds:
   - id: "affine-break"
     builder: rust
