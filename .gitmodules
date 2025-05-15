@@ -19,3 +19,6 @@
 [submodule "affine-break"]
 	path = affine-break
 	url = https://github.com/DawnMagnet/affine-break.git
+[submodule "rsa-wiener-attack"]
+	path = rsa-wiener-attack
+	url = https://github.com/DawnMagnet/rsa-wiener-attack
